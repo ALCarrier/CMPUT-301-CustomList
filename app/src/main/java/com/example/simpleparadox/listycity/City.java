@@ -1,5 +1,8 @@
 package com.example.simpleparadox.listycity;
 
+import java.util.Collections;
+import java.util.List;
+
 public class City {
     private String city;
     private String province;
@@ -8,6 +11,7 @@ public class City {
         this.city = city;
         this.province = province;
     }
+
 
     String getCityName(){
         return this.city;

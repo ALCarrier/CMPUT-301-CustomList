@@ -19,8 +19,8 @@ public class CustomList extends ArrayAdapter<City> {
     private ArrayList<City> cities;
     private Context context;
 
-    public CustomList(Context context, ArrayList<City> cities){
-        super(context,0, cities);
+    public CustomList(Context context, ArrayList<City> cities) {
+        super(context, 0, cities);
         this.cities = cities;
         this.context = context;
     }
@@ -32,8 +32,8 @@ public class CustomList extends ArrayAdapter<City> {
 //        return super.getView(position, convertView, parent);
         View view = convertView;
 
-        if(view == null){
-            view = LayoutInflater.from(context).inflate(R.layout.content, parent,false);
+        if (view == null) {
+            view = LayoutInflater.from(context).inflate(R.layout.content, parent, false);
         }
 
         City city = cities.get(position);
@@ -47,11 +47,24 @@ public class CustomList extends ArrayAdapter<City> {
         return view;
 
     }
-    public int getCount(){
+
+    public int getCount() {
         return cities.size();
     }
-    public void addCity(City city){
+
+    public void addCity(City city) {
         cities.add(city);
         return;
     }
+
+    /**
+     * This checks the list whether it contains the elements or not.
+     *
+     * @param city
+     * @return Return a boolean whether it contains the elements or not.
+     */
+    public void deleteCity(City city){
+        return;
+    }
+
 }
