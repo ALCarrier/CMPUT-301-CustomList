@@ -64,6 +64,12 @@ public class CustomList extends ArrayAdapter<City> {
      * @return Return a boolean whether it contains the elements or not.
      */
     public void deleteCity(City city){
+        if(cities.contains(city)) {
+            cities.remove(city);
+        }
+        else {
+            throw new IllegalArgumentException();
+        }
         return;
     }
 
